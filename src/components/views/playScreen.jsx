@@ -8,6 +8,7 @@ export default function PlayScreen () {
 
     const [score, setScore] = useState(0);
     const [highestScore, setHighestScore] = useState(0);
+    const [clickedCards, setClickedCards] = useState([]);
     return (
         <div>
             <div className="header-area">
@@ -18,7 +19,11 @@ export default function PlayScreen () {
                 />
             </div>
             <div className="play-area">
-                <CardsHolder />
+                <CardsHolder 
+                setScore = {setScore}
+                setClickedCards={setClickedCards}
+                clickedCards = {clickedCards}
+                />
             </div>
         </div>
     )
