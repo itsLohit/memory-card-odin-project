@@ -1,4 +1,5 @@
-import Cards from "./cards"
+import Cards from "./cards";
+import '../styles/cardsHolder.css'; 
 
 export default function CardsHolder () {
     

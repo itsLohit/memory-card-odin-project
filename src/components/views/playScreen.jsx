@@ -1,19 +1,25 @@
 import CardsHolder from "../CardsHolder";
 import logo from "../../assets/images/logo.png"
 import ScoreBoard from "../scoreBoard";
+import { useState } from "react";
+import '../../styles/playScreen.css';
 
 export default function PlayScreen () {
 
-    let score = 0;
-    let highestScore = 0;
+    const [score, setScore] = useState(0);
+    const [highestScore, setHighestScore] = useState(0);
     return (
         <div>
-            <div><img src={logo} alt="logo image" /></div>
-            <ScoreBoard 
-            score = {score}
-            highestScore = {highestScore}
-            />
-            <CardsHolder />
+            <div className="header-area">
+                <div className="logo"><img src={logo} alt="logo image" /></div>
+                <ScoreBoard
+                score = {score}
+                highestScore = {highestScore}
+                />
+            </div>
+            <div className="play-area">
+                <CardsHolder />
+            </div>
         </div>
     )
 }
