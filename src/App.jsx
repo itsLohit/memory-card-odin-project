@@ -1,9 +1,9 @@
-import PlayScreen from "./components/views/playScreen";
+import GameController from "./components/gameController";
 
 export default function App () {
   return (
     <div>
-      <PlayScreen />
+      <GameController />
     </div>
   )
 }

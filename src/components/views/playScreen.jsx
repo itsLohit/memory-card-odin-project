@@ -1,14 +1,17 @@
 import CardsHolder from "../CardsHolder";
 import logo from "../../assets/images/logo.png"
 import ScoreBoard from "../scoreBoard";
-import { useState } from "react";
+import { useEffect } from "react";
 import '../../styles/playScreen.css';
 
-export default function PlayScreen () {
+export default function PlayScreen ({setGameScreen, gameEndStatus, score, highestScore, cardClickHandle, cardsData}) {
 
-    const [score, setScore] = useState(0);
-    const [highestScore, setHighestScore] = useState(0);
-    const [clickedCards, setClickedCards] = useState([]);
+    useEffect(() => {
+      if(gameEndStatus === 'Win' || gameEndStatus === 'Lose') {
+        setGameScreen('endScreen');
+      }
+    }, [gameEndStatus, setGameScreen]);
+
     return (
         <div>
             <div className="header-area">
@@ -20,9 +23,8 @@ export default function PlayScreen () {
             </div>
             <div className="play-area">
                 <CardsHolder 
-                setScore = {setScore}
-                setClickedCards={setClickedCards}
-                clickedCards = {clickedCards}
+                cardClickHandle = {cardClickHandle}
+                cardsData = {cardsData}
                 />
             </div>
         </div>
