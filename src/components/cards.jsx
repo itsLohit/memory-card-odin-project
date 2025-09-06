@@ -1,10 +1,9 @@
-import cardsImage from '../assets/images/card.jpg'
 import '../styles/cards.css'
 
-export default function Cards ({cardClickHandle, cardId}) {
+export default function Cards ({cardClickHandle, img}) {
     return (
-        <div className='card-img' onClick={() => cardClickHandle(cardId)}>
-            <img src= {cardsImage} alt="card pic" />
+        <div className='card-img' onClick={cardClickHandle}>
+            <img src= {img} alt="card pic" />
         </div   >
     )
 }

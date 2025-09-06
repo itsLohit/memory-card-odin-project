@@ -1,40 +1,36 @@
 import Cards from "./cards";
 import '../styles/cardsHolder.css'; 
+import characters from "./characters.js";
 
 export default function CardsHolder ({setScore, setClickedCards, clickedCards}) {
     
     function cardClickHandle(cardId) {
-        setClickedCards(prevArray => {
-            const safePrevArray = prevArray || [];
-            if (safePrevArray.includes(cardId)) {
-                return safePrevArray;   
-            } else {
-                return [...safePrevArray, cardId];
-            }
-        });
-        
         if(!clickedCards.includes(cardId)) {
+            setClickedCards([...clickedCards, cardId])
             setScore(prevScore => prevScore + 1);
+        }
+        else {
+            return false;
         }
     }
 
     const cardsData = [
-        {id: 1, label: 'Card 1'},
-        {id: 2, label: 'Card 2'},
-        {id: 3, label: 'Card 3'},
-        {id: 4, label: 'Card 4'},
-        {id: 5, label: 'Card 5'},
-        {id: 6, label: 'Card 6'},
-        {id: 7, label: 'Card 7'},
-        {id: 8, label: 'Card 8'},
-        {id: 9, label: 'Card 9'},
-        {id: 10, label: 'Card 10'},
-        {id: 11, label: 'Card 11'},
-        {id: 12, label: 'Card 12'},
-        {id: 13, label: 'Card 13'},
-        {id: 14, label: 'Card 14'},
-        {id: 15, label: 'Card 15'},
-        {id: 16, label: 'Card 16'}
+        {id: 1, label: 'Card 1', img:characters[0].img},
+        {id: 2, label: 'Card 2', img:characters[1].img},
+        {id: 3, label: 'Card 3', img:characters[2].img},
+        {id: 4, label: 'Card 4', img:characters[3].img},
+        {id: 5, label: 'Card 5', img:characters[4].img},
+        {id: 6, label: 'Card 6', img:characters[5].img},
+        {id: 7, label: 'Card 7', img:characters[6].img},
+        {id: 8, label: 'Card 8', img:characters[7].img},
+        {id: 9, label: 'Card 9', img:characters[8].img},
+        {id: 10, label: 'Card 10', img:characters[9].img},
+        {id: 11, label: 'Card 11', img:characters[10].img},
+        {id: 12, label: 'Card 12', img:characters[11].img},
+        {id: 13, label: 'Card 13', img:characters[12].img},
+        {id: 14, label: 'Card 14', img:characters[13].img},
+        {id: 15, label: 'Card 15', img:characters[14].img},
+        {id: 16, label: 'Card 16', img:characters[15].img},
     ];
     
 return (
@@ -43,8 +39,9 @@ return (
            {cardsData.map(card => (
             <Cards 
             key={card.id}
-            cardClickHandle={cardClickHandle}
-            cardId = {card.id}
+            cardClickHandle={() => cardClickHandle(card.id)}
+            label = {card.label}
+            img = {card.img}
             />
            ))}
         </div>
