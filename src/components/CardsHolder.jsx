@@ -1,20 +1,11 @@
 import Cards from "./cards";
 import '../styles/cardsHolder.css'; 
 import characters from "./characters.js";
+import { useState } from "react";
 
 export default function CardsHolder ({setScore, setClickedCards, clickedCards}) {
-    
-    function cardClickHandle(cardId) {
-        if(!clickedCards.includes(cardId)) {
-            setClickedCards([...clickedCards, cardId])
-            setScore(prevScore => prevScore + 1);
-        }
-        else {
-            return false;
-        }
-    }
 
-    const cardsData = [
+    const initialCardsData = [
         {id: 1, label: 'Card 1', img:characters[0].img},
         {id: 2, label: 'Card 2', img:characters[1].img},
         {id: 3, label: 'Card 3', img:characters[2].img},
@@ -32,6 +23,30 @@ export default function CardsHolder ({setScore, setClickedCards, clickedCards}) 
         {id: 15, label: 'Card 15', img:characters[14].img},
         {id: 16, label: 'Card 16', img:characters[15].img},
     ];
+
+    const [cardsData, setCardsData] = useState(initialCardsData);
+    
+    function cardClickHandle(cardId) {
+        if(!clickedCards.includes(cardId)) {
+            setClickedCards([...clickedCards, cardId])
+            setScore(prevScore => prevScore + 1);
+        }
+        else {
+            return false;
+        }
+        setCardsData(shuffleArray(cardsData));
+    }
+
+    
+
+    function shuffleArray(array) {
+        const newArray = [...array];
+        for(let i = newArray.length - 1; i>0; i--) {
+            const j = Math.floor(Math.random() * (i+1));
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+    }
     
 return (
     <div>
