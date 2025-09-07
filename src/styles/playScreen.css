@@ -1,4 +1,46 @@
+.playScreen {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../assets/images/playScreen.webp);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
 .header-area {
     display: flex;
     justify-content: space-between;
+}
+
+.playScreen .logo {
+    margin-left: 2rem;
+    margin-top: 2rem;   
+}
+
+
+
+@media (max-width: 600px) {
+  .playScreen .logo img{
+    max-width: 10rem;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .playScreen .logo {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 1370px) {
+  .playScreen .logo img{
+    max-width: 10rem;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .playScreen .logo {
+    margin: 2rem;
+  }
+
 }

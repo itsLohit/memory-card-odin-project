@@ -1,18 +1,18 @@
-import po from '../assets/images/characters/Po.webp';
-import tigress from '../assets/images/characters/Tigress.webp';
-import oogway from '../assets/images/characters/Oogway.webp';
-import shifu from '../assets/images/characters/Shifu.webp';
-import kai from '../assets/images/characters/Kai.webp';
-import taiLung from '../assets/images/characters/Tai_Lung.webp';
-import shen from '../assets/images/characters/ShenKFP2.webp';
-import thunderingRhino from '../assets/images/characters/ThunderingRhino2.webp';
-import zhen from '../assets/images/characters/Zhen.webp';
-import bossWolf from '../assets/images/characters/BossWolf2.webp';
-import chameleon from '../assets/images/characters/Chameleon-infobox.webp';
-import croc from '../assets/images/characters/Croc.webp';
-import crane from '../assets/images/characters/KFP3-promo-crane1.webp';
-import mantis from '../assets/images/characters/KFP3-promo-mantis1.webp';
-import monkey from '../assets/images/characters/KFP3-promo-monkey1.webp';
+import po from '../assets/images/characters/po.png';
+import tigress from '../assets/images/characters/tigress.png';
+import oogway from '../assets/images/characters/oogway.png';
+import shifu from '../assets/images/characters/shifu.png';
+import kai from '../assets/images/characters/kai.png';
+import taiLung from '../assets/images/characters/taiLung.png';
+import shen from '../assets/images/characters/shen.png';
+import thunderingRhino from '../assets/images/characters/thunderingRhino.png';
+import zhen from '../assets/images/characters/zhen.png';
+import bossWolf from '../assets/images/characters/bossWolf.png';
+import chameleon from '../assets/images/characters/chameleon.png';
+import croc from '../assets/images/characters/croc.png';
+import crane from '../assets/images/characters/crane.png';
+import mantis from '../assets/images/characters/mantis.png';
+import monkey from '../assets/images/characters/monkey.png';
 import masterChicken from '../assets/images/characters/Master_Chicken.webp';
 
 const characters = [
@@ -34,51 +34,35 @@ const characters = [
     },
     {
         img: kai,
-        name: 'kai',
+        name: 'Kai',
     },
     {
         img: taiLung,
-        name: 'taiLung',
-    },
-    {
-        img: shen,
-        name: 'shen',
+        name: 'Tai Lung',
     },
     {
         img: thunderingRhino,
-        name: 'thunderingRhino',
+        name: 'Thundering Rhino',
     },
     {
         img: zhen,
-        name: 'zhen',
+        name: 'Zhen',
     },
     {
         img: bossWolf,
-        name: 'bossWolf',
-    },
-    {
-        img: chameleon,
-        name: 'chameleon',
-    },
-    {
-        img: croc,
-        name: 'croc',
+        name: 'Boss Wolf',
     },
     {
         img: crane,
-        name: 'crane',
+        name: 'Crane',
     },
     {
         img: mantis,
-        name: 'mantis',
+        name: 'Mantis',
     },
     {
         img: monkey,
-        name: 'monkey',
-    },
-    {
-        img: masterChicken,
-        name: 'masterChicken',
+        name: 'Monkey',
     },
 ];
 

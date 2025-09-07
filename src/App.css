@@ -1,0 +1,8 @@
+@font-face {
+    font-family: mainFont;
+    src: url(./assets/fonts/main.ttf);
+}
+
+.app {
+    font-family: mainFont;
+}

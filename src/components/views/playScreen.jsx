@@ -4,8 +4,7 @@ import ScoreBoard from "../scoreBoard";
 import { useEffect } from "react";
 import '../../styles/playScreen.css';
 
-export default function PlayScreen ({setGameScreen, gameEndStatus, score, highestScore, cardClickHandle, cardsData}) {
-
+export default function PlayScreen ({flipped,setGameScreen, gameEndStatus, score, highestScore, cardClickHandle, cardsData}) {
     useEffect(() => {
       if(gameEndStatus === 'Win' || gameEndStatus === 'Lose') {
         setGameScreen('endScreen');
@@ -13,7 +12,7 @@ export default function PlayScreen ({setGameScreen, gameEndStatus, score, highes
     }, [gameEndStatus, setGameScreen]);
 
     return (
-        <div>
+        <div className="playScreen">
             <div className="header-area">
                 <div className="logo"><img src={logo} alt="logo image" /></div>
                 <ScoreBoard
@@ -25,6 +24,7 @@ export default function PlayScreen ({setGameScreen, gameEndStatus, score, highes
                 <CardsHolder 
                 cardClickHandle = {cardClickHandle}
                 cardsData = {cardsData}
+                flipped = {flipped}
                 />
             </div>
         </div>

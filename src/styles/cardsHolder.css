@@ -1,8 +1,31 @@
-.cards-container {
+.cards-holder-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 30rem;
+    padding-right: 30rem;
     padding-top: 2rem;
     justify-items: center;
+}
+
+
+@media (max-width: 600px) {
+  .cards-holder-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 1370px) {
+  .cards-holder-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    justify-items: center;
+  }
 }

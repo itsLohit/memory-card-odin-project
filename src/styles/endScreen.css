@@ -1,0 +1,102 @@
+.endScreen {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../assets/images/playScreen.webp);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.endScreen .logo {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.endScreen .description-box {
+  background: rgba(30, 30, 30, 0.75); 
+  backdrop-filter: blur(7px); 
+  min-width: 32rem;
+  max-width: 42rem;
+  padding: 2.5rem 2.5rem;
+  border: 2px solid rgba(255,255,255,0.18);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(30, 30, 30, 0.22);
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.endScreen .description-box p {
+  margin-bottom: 2.0rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+.endScreen .description-box button {
+  padding: 0.8rem 3rem;
+  font-family: inherit;
+  word-spacing: 0.5rem;
+  font-size: 1.2rem;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 9px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+.endScreen .description-box button:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+
+@media (max-width: 600px) {
+
+  .endScreen {
+    overflow: scroll;
+  }
+
+  .endScreen .logo img{
+    max-width: 15rem;
+    height: auto;
+  }
+
+  .endScreen .logo {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .endScreen .description-box {
+    min-width: 15rem;
+    max-width: 20rem;
+    padding: 2.5rem 2.5rem;
+    margin: 2rem auto;
+    border-radius: 18px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 1370px) {
+  .startScreen {
+    overflow: scroll;
+  }
+
+  .startScreen .logo img{
+    max-width: 15rem;
+    height: auto;
+  }
+
+  .startScreen .logo {
+    text-align: center;
+    margin: 2rem;
+  }
+
+}
